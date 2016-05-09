@@ -78,12 +78,12 @@
 						</execution>
 					</executions>
 					<configuration>
-						<!-- Run a specific testNG suite <suiteXmlFiles> <suiteXmlFile>${project.build.testOutputDirectory}/suite_room_only_e2e.xml</suiteXmlFile> 
-							</suiteXmlFiles> -->
-						<suiteXmlFiles>
-							<suiteXmlFile>${testNGSourceDirectory}/${suiteXmlFile}</suiteXmlFile>
-							<!-- <suiteXmlFile>${testNGSourceDirectory}/composite/MavenBuild.xml</suiteXmlFile> -->
-						</suiteXmlFiles>
+						
+						<includes>
+<include>com/Test/.*class</include>
+</includes>
+						
+						
 					</configuration>
 				</plugin>
 				<plugin>
@@ -106,5 +106,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	
+	
 </project>
 
